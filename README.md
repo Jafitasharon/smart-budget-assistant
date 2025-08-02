@@ -25,26 +25,39 @@ An intelligent Java-based personal budgeting desktop application that helps user
 
 ## 🛠 Tech Stack
 
-| Layer         | Technology               |
-|---------------|---------------------------|
-| Frontend (GUI) | JavaFX, FXML, SceneBuilder |
-| Backend        | Java (OOP), SQLite (JDBC) 
+| Layer          | Technology                                                      |
+|----------------|-----------------------------------------------------------------|
+| Frontend (GUI) | JavaFX, FXML, SceneBuilder                                     |
+| Backend        | Java (OOP), SQLite (JDBC)                                      |
 | AI & OCR       | Python (Tesseract OCR, Chatbot with scikit-learn/transformers) |
-| Reports        | Apache PDFBox or iText   |
-| Version Control| Git, GitHub              |
+| Reports        | Apache PDFBox or iText                                         |
+| Version Control| Git, GitHub                                                    |
 
 ---
 
 ## 📁 Project Structure
 
 Smart_Budget_Assistant/
-├── src/ # Java source code
-│ ├── Main.java
-│ └── controllers/
-├── resources/ # FXML, images, styles
-│ ├── MainView.fxml
-│ └── styles.css
-├── docs/ # PPT, planning docs
+├── src/
+│ ├── Main.java # App launcher
+│ ├── controllers/ # JavaFX UI logic
+│ ├── models/ # Core classes (User, Expense, Budget)
+│ └── services/ # Backend logic (CRUD, Auth)
+│
+├── resources/
+│ ├── fxml/ # UI layout files
+│ ├── css/ # Styling
+│ └── images/ # Assets
+│
+├── backend/
+│ ├── db/ # SQLite DB & schemas
+│ └── reports/ # Exported PDFs
+│
+├── ocr-ai/
+│ ├── receipt_scanner.py # Tesseract OCR
+│ └── chatbot_advisor.py # AI assistant
+│
+├── docs/ # PPTs & documentation
 ├── README.md
 └── .gitignore
 
@@ -64,14 +77,29 @@ Smart_Budget_Assistant/
    ```bash
    git clone https://github.com/anumita-14/smart-budget-assistant.git
    cd smart-budget-assistant
+   ```
 
-2. Open in VS Code. Make sure JavaFX is configured correctly.
+2. Open in VS Code with Java Extension Pack installed. Make sure JavaFX is configured correctly.Set VM arguments.
 
 3. Run the app:
 
 Use Main.java as the entry point.
 
 Load FXML files in your code.
+4. To run OCR or chatbot scripts:
+
+```bash
+
+cd ocr-ai
+python receipt_scanner.py
+python chatbot_advisor.py
+
+```
+
+---
+
+## 📸 Sample Screenshots (coming soon)
+> Add UI screenshots of the login screen, dashboard, expense input, and reports once built.
 
 ---
 
@@ -94,7 +122,22 @@ Cloud sync and user profiles
 ---
 
 📜 License
-MIT License – feel free to use, modify, and distribute.
 
-Made with ❤️ by Anumita & Jafita
+MIT License – feel free to use, modify, and distribute.
+Please credit the authors if reused or extended for public release.
+
+---
+
+💡 Future Scope
+Financial goal tracking
+
+Multi-user support
+
+Cloud sync with Firebase or Supabase
+
+Voice assistant interface
+
+---
+
+Made by Anumita & Jafita
 

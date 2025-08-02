@@ -1,8 +1,16 @@
-# --- Existing Java ignores ---
+# Compiled class files
 *.class
+
+# Log files
 *.log
+
+# BlueJ files
 *.ctxt
+
+# Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+# Package Files #
 *.jar
 *.war
 *.nar
@@ -10,26 +18,29 @@
 *.zip
 *.tar.gz
 *.rar
+
+# virtual machine crash logs
 hs_err_pid*
 replay_pid*
 
-# --- IDE settings ---
+# IDE settings
 .vscode/
 .idea/
 *.iml
 
-# --- Build directories ---
+# Build directories
 bin/
 out/
 build/
 target/
 
-# --- OS-specific junk ---
+# OS-specific junk
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# --- JavaFX-specific (optional depending on tools) ---
+# JavaFX-specific (optional depending on tools)
 *.launch
 *.classpath
 *.project
+
