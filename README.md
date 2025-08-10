@@ -138,6 +138,15 @@ Cloud sync with Firebase or Supabase
 Voice assistant interface
 
 ---
+👥 Contribution Instructions:
+
+1. Fork the repo
+2. Create a new branch
+3. Make your changes
+4. Commit and push
+5. Open a pull request
+
+---
 
 Made by Anumita & Jafita
 
