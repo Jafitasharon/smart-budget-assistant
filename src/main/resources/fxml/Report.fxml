@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.smartbudget.ReportController"
+            stylesheets="@../css/report.css">
+
+    <!-- Top Header -->
+    <top>
+        <Label text="Income &amp; Expense Report"
+               styleClass="header-label"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <!-- Center Content -->
+    <center>
+        <VBox spacing="15" alignment="CENTER" styleClass="content-box">
+            <TableView fx:id="reportTable" prefHeight="400" prefWidth="600">
+                <columns>
+                    <TableColumn text="Date" fx:id="dateColumn" prefWidth="150"/>
+                    <TableColumn text="Category" fx:id="categoryColumn" prefWidth="150"/>
+                    <TableColumn text="Amount" fx:id="amountColumn" prefWidth="150"/>
+                    <TableColumn text="Type" fx:id="typeColumn" prefWidth="150"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Export Report" fx:id="exportButton" styleClass="action-button"/>
+                <Button text="Back to Home" fx:id="homeButton" styleClass="action-button"/>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" stylesheets="@../css/addentry.css">
+
+    <!-- Top Navbar -->
+    <top>
+        <HBox spacing="15" styleClass="navbar">
+            <children>
+                <Label text="➕ Add Expense / Income" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" />
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="🏠 Home" styleClass="navbar-button"/>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- Center Form -->
+    <center>
+        <VBox alignment="CENTER" spacing="20" styleClass="form-container">
+            <children>
+                <!-- Amount -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="💵 Amount:" styleClass="form-label"/>
+                        <TextField fx:id="amountField" promptText="Enter amount" styleClass="form-input"/>
+                    </children>
+                </HBox>
+
+                <!-- Category -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="📂 Category:" styleClass="form-label"/>
+                        <ChoiceBox fx:id="categoryChoice" styleClass="form-input">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Food"/>
+                                    <String fx:value="Transport"/>
+                                    <String fx:value="Shopping"/>
+                                    <String fx:value="Entertainment"/>
+                                    <String fx:value="Bills"/>
+                                    <String fx:value="Other"/>
+                                </FXCollections>
+                            </items>
+                        </ChoiceBox>
+                    </children>
+                </HBox>
+
+                <!-- Type -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="🔄 Type:" styleClass="form-label"/>
+                        <ChoiceBox fx:id="typeChoice" styleClass="form-input">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Expense"/>
+                                    <String fx:value="Income"/>
+                                </FXCollections>
+                            </items>
+                        </ChoiceBox>
+                    </children>
+                </HBox>
+
+                <!-- Date -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="📅 Date:" styleClass="form-label"/>
+                        <DatePicker fx:id="datePicker" styleClass="form-input"/>
+                    </children>
+                </HBox>
+
+                <!-- Notes -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="📝 Notes:" styleClass="form-label"/>
+                        <TextField fx:id="notesField" promptText="Optional notes" styleClass="form-input"/>
+                    </children>
+                </HBox>
+
+                <!-- Submit Button -->
+                <Button text="✔ Add Entry" styleClass="primary-button"/>
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>

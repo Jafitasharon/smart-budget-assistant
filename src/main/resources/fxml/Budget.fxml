@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.smartbudget.BudgetController">
+
+    <center>
+        <VBox spacing="15" alignment="CENTER" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Budget Goals" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Category:"/>
+                <TextField fx:id="categoryField" promptText="Enter category (e.g., Food)"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Limit:"/>
+                <TextField fx:id="limitField" promptText="Enter limit amount"/>
+            </HBox>
+
+            <Button text="Save Goal" fx:id="saveButton"/>
+
+        </VBox>
+    </center>
+</BorderPane>

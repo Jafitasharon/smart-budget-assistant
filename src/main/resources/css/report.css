@@ -1,0 +1,40 @@
+/* Navbar */
+.navbar {
+    -fx-background-color: #34495e;
+    -fx-padding: 12;
+}
+.navbar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.navbar-button:hover {
+    -fx-text-fill: #f39c12;
+}
+
+/* Table Container */
+.table-container {
+    -fx-padding: 20;
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 10;
+}
+.table-view {
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+.table-column {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+/* Summary Bar */
+.summary-bar {
+    -fx-background-color: #2ecc71;
+    -fx-padding: 15;
+}
+.summary-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
