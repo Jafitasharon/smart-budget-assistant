@@ -10,9 +10,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
        System.out.println("Testing resource path...");
-       System.out.println(getClass().getResource("/main/view/login.fxml"));
+       System.out.println(getClass().getResource("/fxml/login.fxml"));
 
-       FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/view/login.fxml"));
+       FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
        Parent root = loader.load();
        primaryStage.setScene(new Scene(root));
        primaryStage.show();
